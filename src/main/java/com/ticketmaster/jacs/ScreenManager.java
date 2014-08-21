@@ -31,7 +31,11 @@ public class ScreenManager {
 		displays[1] = new TicketDisplay(width, 0, width, height);
 		displays[2] = new TicketDisplay(0, height, width, height);
 		displays[3] = new TicketDisplay(width, height, width, height);
-	}
+	
+		// TODO: We need file locking on this directory
+        File dir = new File(imageCache);
+        dir.mkdirs();
+}
 	
 	public static ScreenManager getInstance() {
 		if (instance == null) {
