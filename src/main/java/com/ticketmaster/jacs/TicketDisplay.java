@@ -26,6 +26,7 @@ public class TicketDisplay extends JFrame {
 		setSize(width, height);
 		setLocation(x, y);
 		setUndecorated(true);
+//		setAlwaysOnTop(true);
 		
 	}
 	
