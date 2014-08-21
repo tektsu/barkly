@@ -20,7 +20,7 @@ public class ShowBarcode {
     @Produces(MediaType.TEXT_PLAIN)
     public String show(@PathParam("quadrant") int quadrant, @PathParam("barcode") String barcode) {
     	try {
-    		TicketWindow.getInstance().displayBarcode(quadrant, barcode);
+    		ScreenManager.getInstance().displayBarcode(quadrant, barcode);
     	}
     	catch (RuntimeException e) {
     		return "error: " + quadrant + " " + e.getMessage();

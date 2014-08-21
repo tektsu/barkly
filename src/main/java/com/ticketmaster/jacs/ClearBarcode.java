@@ -22,7 +22,7 @@ public class ClearBarcode {
     @Produces(MediaType.TEXT_PLAIN)
     public String clear(@PathParam("quadrant") int quadrant) {
     	try {
-    		TicketWindow.getInstance().clearBarcode(quadrant);
+    		ScreenManager.getInstance().clearBarcode(quadrant);
     	}
     	catch (RuntimeException e) {
     		return "error: " + quadrant + " " + e.getMessage();
